@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Navbar() {
   return (
@@ -426,8 +427,9 @@ function Footer() {
           &copy; {new Date().getFullYear()} Feeling Mindful LLC. All rights reserved.
         </p>
         <div className="flex gap-6 text-xs text-muted">
-          <a href="#" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Privacy</a>
-          <a href="#" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Terms</a>
+          <Link href="/privacy" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Privacy</Link>
+          <Link href="/terms" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Terms</Link>
+          <Link href="/disclaimer" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Disclaimer</Link>
         </div>
       </div>
     </footer>
