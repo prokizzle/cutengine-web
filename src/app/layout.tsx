@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Exo, Roboto_Mono } from "next/font/google";
+import { PostHogProvider } from "./posthog-provider";
 import "./globals.css";
 
 const exo = Exo({
@@ -39,7 +40,7 @@ export default function RootLayout({
       <body
         className={`${exo.variable} ${robotoMono.variable} font-sans antialiased`}
       >
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   );
