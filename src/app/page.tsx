@@ -4,14 +4,14 @@ import Link from "next/link";
 function Navbar() {
   return (
     <nav className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl rounded-2xl border border-border bg-surface/80 backdrop-blur-xl">
-      <div className="flex items-center justify-between px-6 py-3">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-3">
         <a href="#" className="flex items-center gap-2 cursor-pointer">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-background">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
             </svg>
           </div>
-          <span className="text-lg font-bold tracking-tight">CutEngine</span>
+          <span className="text-lg font-bold tracking-tight hidden sm:inline">CutEngine</span>
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted">
           <a href="#features" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Features</a>
@@ -21,9 +21,9 @@ function Navbar() {
         </div>
         <a
           href="#waitlist"
-          className="rounded-xl bg-primary px-5 py-2 text-sm font-semibold text-background hover:bg-primary-dark transition-colors duration-200 cursor-pointer"
+          className="rounded-xl bg-primary px-4 sm:px-5 py-2 text-sm font-semibold text-background hover:bg-primary-dark transition-colors duration-200 cursor-pointer whitespace-nowrap"
         >
-          Get Early Access
+          Early Access
         </a>
       </div>
     </nav>
@@ -58,7 +58,7 @@ function Hero() {
       <div className="absolute bottom-1/4 -left-32 h-64 w-64 rounded-full bg-primary/3 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="animate-fade-in-up">
+        <div className="animate-fade-in-up text-center lg:text-left">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-6">
             <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-primary tracking-wide uppercase">Coming Soon on iOS</span>
@@ -71,30 +71,30 @@ function Hero() {
             <span className="text-muted font-light text-3xl sm:text-4xl lg:text-5xl">Not the other way around.</span>
           </h1>
 
-          <p className="mt-6 text-lg text-muted max-w-xl leading-relaxed">
+          <p className="mt-6 text-lg text-muted max-w-xl mx-auto lg:mx-0 leading-relaxed">
             CutEngine uses machine learning and your Apple Watch data to calculate{" "}
             <span className="text-foreground font-medium">personalized, daily-adjusted</span> calorie
             and macro targets — so your cut actually works.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
             <a
               href="#waitlist"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-base font-semibold text-background hover:bg-primary-dark transition-colors duration-200 cursor-pointer animate-pulse-glow"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-base font-semibold text-background hover:bg-primary-dark transition-colors duration-200 cursor-pointer animate-pulse-glow w-full sm:w-auto justify-center"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
               Get Early Access
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center gap-2 rounded-xl border border-border px-7 py-3.5 text-base font-medium text-muted hover:text-foreground hover:border-muted transition-colors duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 rounded-xl border border-border px-7 py-3.5 text-base font-medium text-muted hover:text-foreground hover:border-muted transition-colors duration-200 cursor-pointer w-full sm:w-auto justify-center"
             >
               See How It Works
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
             </a>
           </div>
 
-          <div className="mt-10 flex items-center gap-6 text-sm text-muted">
+          <div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-muted">
             <div className="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               <span>HealthKit Privacy</span>
@@ -110,7 +110,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end animate-fade-in-up delay-200">
+        <div className="relative flex justify-center animate-fade-in-up delay-200">
           <div className="relative animate-float">
             <PhoneMockup src="/screenshots/dashboard.png" alt="CutEngine Dashboard showing daily plan, body metrics, recovery status, and macro targets" />
           </div>
@@ -290,10 +290,22 @@ function Comparison() {
     { feature: "Rest day recommendations", ce: true, mfp: false, mf: false, rp: false },
   ];
 
-  function renderCell(value: boolean | string) {
-    if (value === true) return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary mx-auto"><polyline points="20 6 9 17 4 12"/></svg>;
-    if (value === false) return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted/40 mx-auto"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
-    return <span className="text-xs text-amber-400">{value}</span>;
+  const competitors = [
+    { key: "mfp" as const, name: "MyFitnessPal" },
+    { key: "mf" as const, name: "MacroFactor" },
+    { key: "rp" as const, name: "RP Diet" },
+  ];
+
+  function CheckIcon() {
+    return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><polyline points="20 6 9 17 4 12"/></svg>;
+  }
+  function XIcon() {
+    return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted/40"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
+  }
+  function renderValue(value: boolean | string) {
+    if (value === true) return <CheckIcon />;
+    if (value === false) return <XIcon />;
+    return <span className="text-xs text-amber-400 font-medium">{value}</span>;
   }
 
   return (
@@ -310,7 +322,29 @@ function Comparison() {
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-border">
+        {/* Mobile: stacked cards */}
+        <div className="md:hidden space-y-3">
+          {rows.map((row) => (
+            <div key={row.feature} className="rounded-xl border border-border bg-surface/50 p-4">
+              <p className="font-semibold text-foreground text-sm mb-3">{row.feature}</p>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-2">
+                  <CheckIcon />
+                  <span className="text-xs font-semibold text-primary">CutEngine</span>
+                </div>
+                {competitors.map((c) => (
+                  <div key={c.key} className="flex items-center gap-2 rounded-lg bg-surface px-3 py-2">
+                    {renderValue(row[c.key])}
+                    <span className="text-xs text-muted">{c.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: table */}
+        <div className="hidden md:block rounded-2xl border border-border">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border bg-surface/80">
@@ -325,10 +359,10 @@ function Comparison() {
               {rows.map((row, i) => (
                 <tr key={row.feature} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-surface/20" : ""}`}>
                   <td className="px-6 py-3.5 text-foreground">{row.feature}</td>
-                  <td className="px-4 py-3.5 text-center bg-primary/5">{renderCell(row.ce)}</td>
-                  <td className="px-4 py-3.5 text-center">{renderCell(row.mfp)}</td>
-                  <td className="px-4 py-3.5 text-center">{renderCell(row.mf)}</td>
-                  <td className="px-4 py-3.5 text-center">{renderCell(row.rp)}</td>
+                  <td className="px-4 py-3.5 text-center bg-primary/5"><div className="flex justify-center">{renderValue(row.ce)}</div></td>
+                  <td className="px-4 py-3.5 text-center"><div className="flex justify-center">{renderValue(row.mfp)}</div></td>
+                  <td className="px-4 py-3.5 text-center"><div className="flex justify-center">{renderValue(row.mf)}</div></td>
+                  <td className="px-4 py-3.5 text-center"><div className="flex justify-center">{renderValue(row.rp)}</div></td>
                 </tr>
               ))}
             </tbody>
@@ -362,10 +396,10 @@ function Screenshots() {
 
         <div className="grid sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
           {screens.map((s) => (
-            <div key={s.label} className="text-center">
+            <div key={s.label} className="flex flex-col items-center text-center">
               <PhoneMockup src={s.src} alt={s.alt} />
               <h3 className="mt-6 text-lg font-bold">{s.label}</h3>
-              <p className="mt-2 text-sm text-muted leading-relaxed">{s.desc}</p>
+              <p className="mt-2 text-sm text-muted leading-relaxed max-w-xs">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -378,7 +412,7 @@ function Waitlist() {
   return (
     <section id="waitlist" className="py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-        <div className="rounded-3xl border border-primary/20 bg-[radial-gradient(ellipse_at_center,_rgba(34,197,94,0.08)_0%,_transparent_70%)] p-10 sm:p-16">
+        <div className="rounded-3xl border border-primary/20 bg-[radial-gradient(ellipse_at_center,_rgba(34,197,94,0.08)_0%,_transparent_70%)] p-6 sm:p-10 md:p-16">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Stop Guessing. Start <span className="text-primary">Adapting</span>.
           </h2>
@@ -424,7 +458,7 @@ function Footer() {
           <span className="text-sm font-semibold">CutEngine</span>
         </div>
         <p className="text-xs text-muted">
-          &copy; {new Date().getFullYear()} Feeling Mindful LLC. All rights reserved.
+          &copy; {new Date().getFullYear()} Feeling Mindful Labs LLC. All rights reserved.
         </p>
         <div className="flex gap-6 text-xs text-muted">
           <Link href="/privacy" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Privacy</Link>

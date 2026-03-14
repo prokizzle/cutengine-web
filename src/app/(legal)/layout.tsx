@@ -23,7 +23,7 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
       </article>
       <footer className="border-t border-border py-8">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted">&copy; {new Date().getFullYear()} Feeling Mindful LLC. All rights reserved.</p>
+          <p className="text-xs text-muted">&copy; {new Date().getFullYear()} Feeling Mindful Labs LLC. All rights reserved.</p>
           <div className="flex gap-6 text-xs text-muted">
             <Link href="/privacy" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Privacy</Link>
             <Link href="/terms" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Terms</Link>
