@@ -41,9 +41,13 @@ firebase-debug.log
 .env*
 !.env.example
 
+# sentry
+.env.sentry-build-plugin
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.env*.local
