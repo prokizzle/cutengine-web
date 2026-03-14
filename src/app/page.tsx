@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { WaitlistForm } from "./waitlist-form";
 
 function Navbar() {
   return (
@@ -420,25 +421,7 @@ function Waitlist() {
             Join the waitlist and be the first to get CutEngine when it launches on iOS.
             Your cut deserves better than a static calculator.
           </p>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="you@example.com"
-              className="flex-1 rounded-xl border border-border bg-surface px-5 py-3.5 text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200"
-              aria-label="Email address"
-            />
-            <button
-              type="button"
-              className="rounded-xl bg-primary px-7 py-3.5 font-semibold text-background hover:bg-primary-dark transition-colors duration-200 cursor-pointer whitespace-nowrap"
-            >
-              Get Early Access
-            </button>
-          </div>
-
-          <p className="mt-4 text-xs text-muted/60">
-            No spam. We&apos;ll email you once when the app launches.
-          </p>
+          <WaitlistForm />
         </div>
       </div>
     </section>
