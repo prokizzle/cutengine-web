@@ -1,55 +1,22 @@
-import Image from "next/image";
-import Link from "next/link";
+import { Navbar } from "@/components/navbar";
+import { PhoneMockup } from "@/components/phone-mockup";
+import { Footer } from "@/components/footer";
 import { WaitlistForm } from "./waitlist-form";
 
-function Navbar() {
-  return (
-    <nav className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl rounded-[28px] border border-border bg-surface/80 backdrop-blur-xl">
-      <div className="flex items-center justify-between px-4 sm:px-6 py-3">
-        <a href="#" className="flex items-center gap-2 cursor-pointer">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-background">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-            </svg>
-          </div>
-          <span className="text-lg font-bold tracking-tight hidden sm:inline">CutEngine</span>
-        </a>
-        <div className="hidden md:flex items-center gap-8 text-sm text-muted">
-          <a href="#features" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Features</a>
-          <a href="#how-it-works" className="hover:text-foreground transition-colors duration-200 cursor-pointer">How It Works</a>
-          <a href="#compare" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Compare</a>
-          <a href="#screenshots" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Screenshots</a>
-        </div>
-        <a
-          href="#waitlist"
-          className="rounded-xl bg-primary px-4 sm:px-5 py-2 text-sm font-semibold text-background hover:bg-primary-dark transition-colors duration-200 cursor-pointer whitespace-nowrap"
-        >
-          Early Access
-        </a>
-      </div>
-    </nav>
-  );
-}
+const CUT_ENGINE_ICON = (
+  <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-background">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+    </svg>
+  </div>
+);
 
-function PhoneMockup({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
-  return (
-    <div className={`relative w-[280px] sm:w-[300px] ${className}`}>
-      <div className="relative rounded-[3rem] border-[6px] border-surface-light bg-black p-2 shadow-2xl shadow-black/50">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-28 bg-black rounded-b-2xl z-10" />
-        <div className="relative aspect-[9/19.5] rounded-[2.4rem] overflow-hidden bg-black">
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            className="object-cover object-top"
-            sizes="300px"
-            priority
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
+const NAV_LINKS = [
+  { href: "#features", label: "Features" },
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#compare", label: "Compare" },
+  { href: "#screenshots", label: "Screenshots" },
+] as const;
 
 function Hero() {
   return (
@@ -428,36 +395,17 @@ function Waitlist() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-border py-10">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <div className="h-6 w-6 rounded-md bg-primary flex items-center justify-center">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-background">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-            </svg>
-          </div>
-          <span className="text-sm font-semibold">CutEngine</span>
-        </div>
-        <p className="text-xs text-muted">
-          &copy; {new Date().getFullYear()} Feeling Mindful Labs LLC. All rights reserved.
-        </p>
-        <div className="flex gap-6 text-xs text-muted">
-          <Link href="/support" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Support</Link>
-          <Link href="/privacy" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Privacy</Link>
-          <Link href="/terms" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Terms</Link>
-          <Link href="/disclaimer" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Disclaimer</Link>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Navbar
+        brand="CutEngine"
+        brandHref="/"
+        brandIcon={CUT_ENGINE_ICON}
+        links={NAV_LINKS}
+        ctaHref="#waitlist"
+        siblingBrand={{ name: "CardioEngine", href: "/cardioengine" }}
+      />
       <Hero />
       <Problem />
       <Features />

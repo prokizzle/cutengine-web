@@ -10,6 +10,8 @@
   --color-surface-light: #1E1E2A;
   --color-muted: #8E8E9C;
   --color-border: #1A1A24;
+  --color-accent-purple: #BF5AF2;
+  --color-accent-purple-dark: #A344D4;
   --font-sans: var(--font-inter);
   --font-display: var(--font-satoshi), var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: var(--font-jetbrains-mono);
