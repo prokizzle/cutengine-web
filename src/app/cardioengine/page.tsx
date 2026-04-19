@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
-import { PhoneMockup } from "@/components/phone-mockup";
+import Image from "next/image";
 import { Footer } from "@/components/footer";
 import { WaitlistForm } from "../waitlist-form";
 
@@ -125,8 +125,15 @@ function Hero() {
         </div>
 
         <div className="relative flex justify-center animate-fade-in-up delay-200">
-          <div className="relative animate-float">
-            <PhoneMockup src="/screenshots/cardio-dashboard.png" alt="CardioEngine Dashboard showing CARDIO+ENGINE hero, zone gradient progress, weekly minutes, and health metrics" />
+          <div className="relative animate-float w-[280px] sm:w-[300px]">
+            <Image
+              src="/screenshots/cardio-hero.jpg"
+              alt="CardioEngine Dashboard — zone-based coaching built around your actual heart rate"
+              width={1290}
+              height={2796}
+              className="rounded-3xl shadow-2xl shadow-black/50"
+              priority
+            />
           </div>
         </div>
       </div>
@@ -389,8 +396,11 @@ function Comparison() {
 
 function Screenshots() {
   const screens = [
-    { src: "/screenshots/cardio-dashboard.png", alt: "CardioEngine Dashboard — CARDIO+ENGINE hero, zone gradient progress bar, weekly minute tracking, health benefits with resting HR and HRV", label: "Dashboard", desc: "Weekly minutes, zone progress, and health benefit tracking at a glance." },
-    { src: "/screenshots/cardio-settings.png", alt: "CardioEngine Settings — training mode, zone model, weekly volume target, HR source priority, heart rate monitor pairing", label: "Settings", desc: "Configure zone models, weekly targets, HR sources, and BLE monitors." },
+    { src: "/screenshots/cardio-hero.jpg", alt: "CardioEngine Dashboard — zone-based coaching built around your actual heart rate", label: "Dashboard", desc: "Weekly minutes, zone progress, and health benefit tracking at a glance." },
+    { src: "/screenshots/cardio-live-workout.jpg", alt: "CardioEngine Live Workout — real-time zone coaching with HR monitor connected", label: "Live Workout", desc: "Real-time zone coaching with BPM, elapsed time, zone distribution, and calorie burn." },
+    { src: "/screenshots/cardio-zone-profile.jpg", alt: "CardioEngine Zone Profile — personalized heart rate zones calibrated to your aerobic threshold", label: "Zone Profile", desc: "Personalized zones calibrated to your aerobic threshold, not your age." },
+    { src: "/screenshots/cardio-history.jpg", alt: "CardioEngine History — workout sessions with zone breakdowns and effort tracking", label: "History", desc: "Zone breakdown and effort tracked for every session." },
+    { src: "/screenshots/cardio-settings-new.jpg", alt: "CardioEngine Settings — training mode, zone model, weekly volume target, HR source priority", label: "Settings", desc: "Configure zone models, weekly targets, HR sources, and BLE monitors." },
   ];
 
   return (
@@ -407,12 +417,18 @@ function Screenshots() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-10 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {screens.map((s) => (
             <div key={s.label} className="flex flex-col items-center text-center">
-              <PhoneMockup src={s.src} alt={s.alt} />
-              <h3 className="mt-6 text-lg font-bold">{s.label}</h3>
-              <p className="mt-2 text-sm text-muted leading-relaxed max-w-xs">{s.desc}</p>
+              <Image
+                src={s.src}
+                alt={s.alt}
+                width={1290}
+                height={2796}
+                className="rounded-2xl shadow-xl shadow-black/30"
+              />
+              <h3 className="mt-4 text-sm font-bold">{s.label}</h3>
+              <p className="mt-1 text-xs text-muted leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>

@@ -16,7 +16,7 @@ export function PhoneMockup({ src, alt, className = "" }: PhoneMockupProps) {
             src={src}
             alt={alt}
             fill
-            className="object-cover object-top"
+            className="object-contain object-top"
             sizes="300px"
             priority
           />
