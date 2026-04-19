@@ -5,14 +5,24 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
     <div className="min-h-screen">
       <nav className="border-b border-border">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-background">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-              </svg>
-            </div>
-            <span className="text-lg font-bold tracking-tight">CutEngine</span>
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-2 cursor-pointer">
+              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-background">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+              <span className="text-lg font-bold tracking-tight">CutEngine</span>
+            </Link>
+            <Link href="/cardioengine" className="flex items-center gap-2 cursor-pointer">
+              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+                  <path d="M16 25.5 C 16 25.5, 6 19.5, 6 13 C 6 10.2, 8.2 8, 11 8 C 13 8, 14.5 9, 16 11 C 17.5 9, 19 8, 21 8 C 23.8 8, 26 10.2, 26 13 C 26 19.5, 16 25.5, 16 25.5 Z" fill="currentColor" className="text-background" />
+                </svg>
+              </div>
+              <span className="text-lg font-bold tracking-tight">CardioEngine</span>
+            </Link>
+          </div>
           <Link href="/" className="text-sm text-muted hover:text-foreground transition-colors duration-200 cursor-pointer">
             &larr; Back to home
           </Link>
