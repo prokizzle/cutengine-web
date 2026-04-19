@@ -1,18 +1,29 @@
 import type { Metadata } from "next";
-import { Exo, Roboto_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { PostHogProvider } from "./posthog-provider";
 import "./globals.css";
 
-const exo = Exo({
-  variable: "--font-exo",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+const satoshi = localFont({
+  src: [
+    { path: "./fonts/Satoshi-Regular.otf", weight: "400", style: "normal" },
+    { path: "./fonts/Satoshi-Medium.otf",  weight: "500", style: "normal" },
+    { path: "./fonts/Satoshi-Bold.otf",    weight: "700", style: "normal" },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
 });
 
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -38,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${exo.variable} ${robotoMono.variable} font-sans antialiased`}
+        className={`${satoshi.variable} ${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
         <PostHogProvider>{children}</PostHogProvider>
       </body>

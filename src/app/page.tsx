@@ -4,7 +4,7 @@ import { WaitlistForm } from "./waitlist-form";
 
 function Navbar() {
   return (
-    <nav className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl rounded-2xl border border-border bg-surface/80 backdrop-blur-xl">
+    <nav className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl rounded-[28px] border border-border bg-surface/80 backdrop-blur-xl">
       <div className="flex items-center justify-between px-4 sm:px-6 py-3">
         <a href="#" className="flex items-center gap-2 cursor-pointer">
           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
@@ -54,7 +54,7 @@ function PhoneMockup({ src, alt, className = "" }: { src: string; alt: string; c
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(34,197,94,0.08)_0%,_transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(52,199,89,0.08)_0%,_transparent_60%)]" />
       <div className="absolute top-1/4 -right-32 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-1/4 -left-32 h-64 w-64 rounded-full bg-primary/3 blur-3xl" />
 
@@ -65,7 +65,7 @@ function Hero() {
             <span className="text-xs font-medium text-primary tracking-wide uppercase">Coming Soon on iOS</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight font-display">
             Your Calories Should{" "}
             <span className="text-primary">Adapt</span> to You.
             <br />
@@ -145,9 +145,9 @@ function Problem() {
 
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(34,197,94,0.04)_0%,_transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(52,199,89,0.04)_0%,_transparent_60%)]" />
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-display">
           Static Calculators <span className="text-red-400">Stop Working</span> After Week 2
         </h2>
         <p className="mt-4 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
@@ -214,7 +214,7 @@ function Features() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Features</p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-display">
             Data-Driven Cutting, Not Guesswork
           </h2>
           <p className="mt-4 text-muted max-w-2xl mx-auto">
@@ -255,7 +255,7 @@ function HowItWorks() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">How It Works</p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-display">
             From Setup to Adaptive in 14 Days
           </h2>
         </div>
@@ -314,7 +314,7 @@ function Comparison() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Compare</p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-display">
             Not Another Calorie Counter
           </h2>
           <p className="mt-4 text-muted max-w-2xl mx-auto">
@@ -387,7 +387,7 @@ function Screenshots() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Screenshots</p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-display">
             Built for Serious Athletes
           </h2>
           <p className="mt-4 text-muted max-w-2xl mx-auto">
@@ -413,8 +413,8 @@ function Waitlist() {
   return (
     <section id="waitlist" className="py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-        <div className="rounded-3xl border border-primary/20 bg-[radial-gradient(ellipse_at_center,_rgba(34,197,94,0.08)_0%,_transparent_70%)] p-6 sm:p-10 md:p-16">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+        <div className="rounded-3xl border border-primary/20 bg-[radial-gradient(ellipse_at_center,_rgba(52,199,89,0.08)_0%,_transparent_70%)] p-6 sm:p-10 md:p-16">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-display">
             Stop Guessing. Start <span className="text-primary">Adapting</span>.
           </h2>
           <p className="mt-4 text-muted max-w-lg mx-auto leading-relaxed">
@@ -444,6 +444,7 @@ function Footer() {
           &copy; {new Date().getFullYear()} Feeling Mindful Labs LLC. All rights reserved.
         </p>
         <div className="flex gap-6 text-xs text-muted">
+          <Link href="/support" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Support</Link>
           <Link href="/privacy" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Privacy</Link>
           <Link href="/terms" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Terms</Link>
           <Link href="/disclaimer" className="hover:text-foreground transition-colors duration-200 cursor-pointer">Disclaimer</Link>

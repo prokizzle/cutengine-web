@@ -2,16 +2,17 @@
 @plugin "@tailwindcss/typography";
 
 @theme inline {
-  --color-background: #0F172A;
-  --color-foreground: #F8FAFC;
-  --color-primary: #22C55E;
-  --color-primary-dark: #16A34A;
-  --color-surface: #1E293B;
-  --color-surface-light: #334155;
-  --color-muted: #94A3B8;
-  --color-border: #334155;
-  --font-sans: var(--font-exo);
-  --font-mono: var(--font-roboto-mono);
+  --color-background: #0A0A0F;
+  --color-foreground: #FFFFFF;
+  --color-primary: #34C759;
+  --color-primary-dark: #2AAF4E;
+  --color-surface: #14141A;
+  --color-surface-light: #1E1E2A;
+  --color-muted: #8E8E9C;
+  --color-border: #1A1A24;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-satoshi), var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
@@ -30,8 +31,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.15); }
-  50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(52, 199, 89, 0.15); }
+  50% { box-shadow: 0 0 40px rgba(52, 199, 89, 0.3); }
 }
 
 .animate-float {
